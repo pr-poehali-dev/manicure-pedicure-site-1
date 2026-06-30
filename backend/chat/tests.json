@@ -1,0 +1,31 @@
+{
+  "tests": [
+    {
+      "name": "Приём заявки из чата",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "name": "Анна",
+        "phone": "+7 999 123-45-67",
+        "message": "Здравствуйте, хочу записаться на маникюр в субботу"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "success": true
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Пустое сообщение отклоняется",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "name": "Тест",
+        "phone": "",
+        "message": ""
+      },
+      "expectedStatus": 400,
+      "bodyMatcher": "partial"
+    }
+  ]
+}

@@ -9,6 +9,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
+import ChatWidget from '@/components/ChatWidget';
 
 const HERO_IMG = 'https://cdn.poehali.dev/projects/1da769f2-cb50-4ea8-bc29-6e60180ba62b/files/ec0f8e24-52a8-44d0-a17a-745cf70d673f.jpg';
 const INTERIOR_IMG = 'https://cdn.poehali.dev/projects/1da769f2-cb50-4ea8-bc29-6e60180ba62b/files/32478934-e414-4728-89b5-e304746d5014.jpg';
@@ -363,6 +364,8 @@ const Index = () => {
           </p>
         </div>
       </footer>
+
+      <ChatWidget />
     </div>
   );
 };
